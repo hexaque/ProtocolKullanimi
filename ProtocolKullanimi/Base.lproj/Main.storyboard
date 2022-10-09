@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nAi-py-kDt">
+    <device id="retina6_0" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ProtocolKullanimi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHz-LP-FCS">
+                                <rect key="frame" x="159.66666666666666" y="191" width="71" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zj5-mr-U31">
+                                <rect key="frame" x="115" y="656" width="160" height="54"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Geçiş Yap">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonGecisYap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4zm-DW-b2k"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zj5-mr-U31" secondAttribute="bottom" constant="100" id="EsP-wv-XfN"/>
+                            <constraint firstItem="gHz-LP-FCS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="Xrh-jU-UaT"/>
+                            <constraint firstItem="zj5-mr-U31" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="puR-Ne-ytb"/>
+                            <constraint firstItem="gHz-LP-FCS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="szA-OE-g7y"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="D1G-rW-OJT"/>
+                    <connections>
+                        <outlet property="labelSonuc" destination="gHz-LP-FCS" id="10U-Wn-Ap4"/>
+                        <segue destination="YQu-SY-da6" kind="show" identifier="toDetay" id="cqA-EA-r80"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="913.84615384615381" y="3.5545023696682461"/>
+        </scene>
+        <!--DetayVC-->
+        <scene sceneID="lDL-e6-jPl">
+            <objects>
+                <viewController id="YQu-SY-da6" customClass="DetayVC" customModule="ProtocolKullanimi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vxg-pO-uDq">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Yazınız" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nuI-U5-XCB">
+                                <rect key="frame" x="50" y="191" width="290" height="34"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xRa-7l-bln">
+                                <rect key="frame" x="132.66666666666666" y="561" width="124.99999999999997" height="49"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Gönder">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonGonder:" destination="YQu-SY-da6" eventType="touchUpInside" id="dhf-em-wBa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NSj-jz-v3w"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xRa-7l-bln" firstAttribute="centerX" secondItem="vxg-pO-uDq" secondAttribute="centerX" id="HzA-lh-j9Y"/>
+                            <constraint firstItem="NSj-jz-v3w" firstAttribute="trailing" secondItem="nuI-U5-XCB" secondAttribute="trailing" constant="50" id="O2C-0n-gQo"/>
+                            <constraint firstItem="nuI-U5-XCB" firstAttribute="leading" secondItem="NSj-jz-v3w" secondAttribute="leading" constant="50" id="dsa-ic-sZ9"/>
+                            <constraint firstItem="nuI-U5-XCB" firstAttribute="top" secondItem="NSj-jz-v3w" secondAttribute="top" constant="100" id="jrW-7A-4WX"/>
+                            <constraint firstItem="NSj-jz-v3w" firstAttribute="bottom" secondItem="xRa-7l-bln" secondAttribute="bottom" constant="200" id="oL1-QP-9is"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="GXn-dQ-Yrm"/>
+                    <connections>
+                        <outlet property="textFieldGirdi" destination="nuI-U5-XCB" id="Ywf-Fr-jJw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mI4-is-PMJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2146.1538461538462" y="3.5545023696682461"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LKQ-dC-sZB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nAi-py-kDt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DYb-Cs-WfX">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="LJO-RR-MIn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="llv-Tr-6au" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-15.384615384615383" y="3.5545023696682461"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
